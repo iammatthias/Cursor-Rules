@@ -1,6 +1,6 @@
 ---
-description: This rule explains SvelteKit conventions and best practices for fullstack development.
-globs: **/*.js,**/*.ts,**/*.svelte
+description: This rule explains Obsidian Plugin conventions and best practices for development.
+globs: 
 alwaysApply: false
 ---
 # Obsidian Plugin Cursor Rules

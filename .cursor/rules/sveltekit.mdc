@@ -1,5 +1,5 @@
 ---
-description: This rule explains SvelteKit conventions and best practices for fullstack development.
+description: This rule explains SvelteKit conventions and best practices for development.
 globs: 
 alwaysApply: false
 ---
