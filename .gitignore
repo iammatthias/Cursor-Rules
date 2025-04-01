@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.log
+.cache
+.temp
+*.local
