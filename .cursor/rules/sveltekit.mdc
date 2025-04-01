@@ -1,6 +1,6 @@
 ---
 description: This rule explains SvelteKit conventions and best practices for fullstack development.
-globs: **/*.js,**/*.ts,**/*.svelte
+globs: 
 alwaysApply: false
 ---
 We are using Bun. 

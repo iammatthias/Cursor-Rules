@@ -19,9 +19,9 @@ Before starting, ensure you have the following installed:
 
 ## 1. Getting Started & Foundational Structure
 
-Begin your project using official resources and adhere to Obsidian's core plugin structure, as detailed in the [Anatomy of a plugin](https://docs.obsidian.md/Plugins/Getting+started/Anatomy+of+a+plugin).
+Begin your project using official resources and adhere to Obsidian's core plugin structure, as detailed in the [Anatomy of a plugin](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Anatomy+of+a+plugin).
 
--   **Use the Official Template:** It is **highly recommended** to start by cloning or using the official [obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin) as your base.
+-   **Use the Official Template:** It is **highly recommended** to start by cloning or using the official [obsidian-sample-plugin](mdc:https:/github.com/obsidianmd/obsidian-sample-plugin) as your base.
 -   **Entry Point (`main.ts`):**
     -   Your plugin's entry point **must** be `main.ts`.
     -   This file **must** contain a class extending Obsidian’s `Plugin` class, implementing `onload()` and `onunload()`.
@@ -30,7 +30,7 @@ Begin your project using official resources and adhere to Obsidian's core plugin
     -   **Required Fields:** I `name`, `version`, `minAppVersion`, `description`, and `author`. Keep `version` and `minAppVersion` updated. See [Sub/docs.obsidian.md/Plugins/Releasing/Submission+requirements+for+plugins).
 -   **Styling (`styles.css`/`scss`):**
     -   Use a dedicated `styles.css` (or `.scss`) file for all plugin-specific styles. Scope styles carefully.
-    -   **Utilize CSS Variables:** Leverage Obsidian's built-in [CSS variables](https://docs.obsidian.md/Reference/CSS+variables/App+variables) for consistency with themes. You can ae [Search](https://docs.obsidian.mdPlugins/Search), [Graph](https://docs.obsidian.md/Reference/CSS+variables/Plugins/Graph), [File Explorer](https://docs.obsidian.md/Reference/CSS+variables/Plugins/File+explorer), and [Canvas](https://docs.obsidian.md/Reference/CSS+variables/Plugins/Canvas).
+    -   **Utilize CSS Variables:** Leverage Obsidian's built-in [CSS variables](mdc:https:/docs.obsidian.md/Reference/CSS+variables/App+variables) for consistency with themes. You can ae [Search](mdc:https:/docs.obsidian.mdPlugins/Search), [Graph](mdc:https:/docs.obsidian.md/Reference/CSS+variables/Plugins/Graph), [File Explorer](mdc:https:/docs.obsidian.md/Reference/CSS+variables/Plugins/File+explorer), and [Canvas](mdc:https:/docs.obsidian.md/Reference/CSS+variables/Plugins/Canvas).
 -   **Recommended Code Organization:**
     -   Organize reusable UI components (Svelte, React, etc.) under `src/components/`. Use `PascalCase` for component filenames.
     -   Separate utility functions (`src/utils/`) and type definitions (`src/types/`).
@@ -44,35 +44,35 @@ Master Obsidian's core APIs to interact with the application state.
 
 -   **Plugin Lifecycle (`onload()` / `onunload()`):**
     -   `onload()`: Register all commands, settings, listeners, intervals, and resources. Initialize your plugin's functionality.
-    -   `onunload()`: **Critically**, clean up *everything* created in `onload()` (listeners, intervals, UI elements, etc.) to prevent memory leaks and ensure stab  -   Interact with files and folders within the user's vault using the [Vault API](https://docs.obsidian.md/Plugins/Vault). Use it for reading, creating, modifying, and deleting notes and attachments.
+    -   `onunload()`: **Critically**, clean up *everything* created in `onload()` (listeners, intervals, UI elements, etc.) to prevent memory leaks and ensure stab  -   Interact with files and folders within the user's vault using the [Vault API](mdc:https:/docs.obsidian.md/Plugins/Vault). Use it for reading, creating, modifying, and deleting notes and attachments.
 -   **Events API:**
-    -   React to changes within Obsidian (file modifications, layout changes, etc.) by subscribing to the [Events API](https://docs.obsidian.md/. Remlisteners in `onunload()`.
+    -   React to changes within Obsidian (file modifications, layout changes, etc.) by subscribing to the [Events API](mdc:https:/docs.obsidian.md/. Remlisteners in `onunload()`.
 -   **Editor API:**
-    -   Interact directly with the content and state of thsing the extensive [Editor API](https://docs.obsidian.md/Plugins/Ed     -   [Markdown Post Processingan.md/Plugins/Editor/Markdown+post+processing) for modifying rendered HTML.
-        -   [Decorations](https://docs.obsidian.md/Plugins/Editor/Decorations) for adding visual markers or styles to text.
-        -   Understanding [Editor Extensions](https://docs.obsidian.md/Plugins/Editor/Editor+extensions) and [State Management](https://docs.obsidian.md/Plugins/Editor/State+management) for advanced modifications.
-        -   Using [View Plugins](https://docs.obsidian.md/Plugins/Editor/View+plugins) to add custom behaviors.
+    -   Interact directly with the content and state of thsing the extensive [Editor API](mdc:https:/docs.obsidian.md/Plugins/Ed     -   [Markdown Post Processingan.md/Plugins/Editor/Markdown+post+processing) for modifying rendered HTML.
+        -   [Decorations](mdc:https:/docs.obsidian.md/Plugins/Editor/Decorations) for adding visual markers or styles to text.
+        -   Understanding [Editor Extensions](mdc:https:/docs.obsidian.md/Plugins/Editor/Editor+extensions) and [State Management](mdc:https:/docs.obsidian.md/Plugins/Editor/State+management) for advanced modifications.
+        -   Using [View Plugins](mdc:https:/docs.obsidian.md/Plugins/Editor/View+plugins) to add custom behaviors.
 
 ---
 
 ## 3. User Interface & Interaction
 
-Integrate seamlessly with Obsidian's UI paradigms, detailed in [About user interface](https://docs.obsidian.md/Plugins/User+interface/About+user+interface).
+Integrate seamlessly with Obsidian's UI paradigms, detailed in [About user interface](mdc:https:/docs.obsidian.md/Plugins/User+interface/About+user+interface).
 
 -   **UI Consistency:**
-    -   **Adhere** to Obsidian's UI guidelines. Use standard [HTML elements](https://docs.obsidian.md/Plugins/User+interface/HTML+elements) styled by Obsidian and built-in components where possible.
+    -   **Adhere** to Obsidian's UI guidelines. Use standard [HTML elements](mdc:https:/docs.obsidian.md/Plugins/User+interface/HTML+elements) styled by Obsidian and built-in components where possible.
 -   **Workspace & Views:**
-    -   Manage plugin UI panes and workspace interactions using the [Workspace API](https://docs.obsidian.md/Plugins/User+interface/Workspace).
-    -   Create custom UI panels using [Views](https://docs.obsidian.md/Plugins/User+interface/Views).
-    -   Optimize load times using [Deferred Views](https://docs.obsidian.md/Plugins/Guides/Understanding+deferred+views).
+    -   Manage plugin UI panes and workspace interactions using the [Workspace API](mdc:https:/docs.obsidian.md/Plugins/User+interface/Workspace).
+    -   Create custom UI panels using [Views](mdc:https:/docs.obsidian.md/Plugins/User+interface/Views).
+    -   Optimize load times using [Deferred Views](mdc:https:/docs.obsidian.md/Plugins/Guides/Understanding+deferred+views).
 -   **Interaction Points:**
-    -   Register [Commands](https://docs.obsidian.md/Plugins/User+interface/Commands) for user actions accessible via the command palette or hotkeys.
-    -   Add persistent information or actions to the [Status bar](https://docs.obsidian.md/Plugins/User+interface/Status+bar).
-    -   Create configuration screens using the [Settings](https://docs.obsidian.md/Plugins/User+interface/Settings) API.
-    -   Add top-level actions using [Ribbon actions](https://docs.obsidian.md/Plugins/User+interface/Ribbon+actions).
-    -   Present temporary dialogs or forms using [Modals](https://docs.obsidian.md/Plugins/User+interface/Modals).
-    -   Utilize Obsidian's built-in [Icons](https://docs.obsidian.md/Plugins/User+interface/Icons) for visual consistency.
-    -   Add actions to right-click menus using [Context menus](https://docs.obsidian.md/Plugins/User+interface/Context+menus).
+    -   Register [Commands](mdc:https:/docs.obsidian.md/Plugins/User+interface/Commands) for user actions accessible via the command palette or hotkeys.
+    -   Add persistent information or actions to the [Status bar](mdc:https:/docs.obsidian.md/Plugins/User+interface/Status+bar).
+    -   Create configuration screens using the [Settings](mdc:https:/docs.obsidian.md/Plugins/User+interface/Settings) API.
+    -   Add top-level actions using [Ribbon actions](mdc:https:/docs.obsidian.md/Plugins/User+interface/Ribbon+actions).
+    -   Present temporary dialogs or forms using [Modals](mdc:https:/docs.obsidian.md/Plugins/User+interface/Modals).
+    -   Utilize Obsidian's built-in [Icons](mdc:https:/docs.obsidian.md/Plugins/User+interface/Icons) for visual consistency.
+    -   Add actions to right-click menus using [Context menus](mdc:https:/docs.obsidian.md/Plugins/User+interface/Context+menus).
 
 ---
 
@@ -82,8 +82,8 @@ Follow consistent patterns, especially when using UI frameworks.
 
 -   **Naming & Responsibility:** Use `PascalCase` for components; design for single responsibility.
 -   **Frameworks:** Adhere to specific framework guidance:
-    -   Svelte: [Use Svelte in your Plugin](https://docs.obsidian.md/Plugins/Getting+started/Use+Svelte+in+your+plugin)
-    -   React: [Use React in your Plugin](https://docs.obsidian.md/Plugins/Getting+started/Use+React+in+your+plugin)
+    -   Svelte: [Use Svelte in your Plugin](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Use+Svelte+in+your+plugin)
+    -   React: [Use React in your Plugin](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Use+React+in+your+plugin)
 -   **Type Safety:** Employ TypeScript rigorously.
 
 ---
@@ -93,7 +93,7 @@ Follow consistent patterns, especially when using UI frameworks.
 Manage data effectively and handle asynchronous operations correctly.
 
 -   **Asynchronous Operations:** Use `async/await` with robust `try...catch` error handling for `Vault` operations, `requestUrl`, and other async tasks.
--   **State Management:** Prefer local component state or Svelte/React context. Use Obsidian's settings for persistence. Advanced editor state may require understanding Obsidian's [State fields](https://docs.obsidian.md/Plugins/Editor/State+fields).
+-   **State Management:** Prefer local component state or Svelte/React context. Use Obsidian's settings for persistence. Advanced editor state may require understanding Obsidian's [State fields](mdc:https:/docs.obsidian.md/Plugins/Editor/State+fields).
 
 ---
 
@@ -105,8 +105,8 @@ When incorporating external AI services (like OpenAI or Claude) **into your Obsi
     -   You **must always** integrate using the **most recent stable version** of the vendor's API.
     -   **Rationale:** Ensures access to features, performance, and security patches. Regularly review and update.
 -   **Documentation:**
-    -   **OpenAI:** [OpenAI API Documentation](https://platform.openai.com/docs).
-    -   **Claude:** [Anthropic Claude Documentation](https://docs.anthropic.com).
+    -   **OpenAI:** [OpenAI API Documentation](mdc:https:/platform.openai.com/docs).
+    -   **Claude:** [Anthropic Claude Documentation](mdc:https:/docs.anthropic.com).
 -   **API Key Security:** Implement secure methods for handling API keys (e.g., via Settings). **Never** embed keys in source code.
 -   **Error Handling & User Feedback:** Provide clear feedback on AI operations and errors.
 
@@ -131,7 +131,7 @@ Build resilient, performant plugins.
 -   **User Messaging:** Use Obsidian's `Notice` API for user-facing errors.
 -   **Logging:** Use `console.*` methods appropriately for debugging.
 -   **Performance:** Minimize `onload` work. Defer tasks. Optimize critical paths.
-    -   Reference: [Optimizing Plugin Load Time](https://docs.obsidian.md/Plugins/Guides/Optimizing+plugin+load+time).
+    -   Reference: [Optimizing Plugin Load Time](mdc:https:/docs.obsidian.md/Plugins/Guides/Optimizing+plugin+load+time).
 
 ---
 
@@ -141,25 +141,25 @@ Follow standard procedures for developing, building, and releasing your plugin.
 
 -   **Development Workflow:**
     -   Use `npm run dev` for automatic rebuilding and faster testing cycles.
-    -   Consult the [Development Workflow](https://docs.obsidian.md/Plugins/Getting+started/Development+workflow) guide.
+    -   Consult the [Development Workflow](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Development+workflow) guide.
 -   **Local Testing:**
-    -   Follow the steps in the [Build a plugin](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) guide to load your built plugin into your vault for testing.
+    -   Follow the steps in the [Build a plugin](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) guide to load your built plugin into your vault for testing.
 -   **Production Build:**
     -   Use `npm run build` to create final distribution files.
 -   **Releasing:**
-    -   **Adhere strictly** to the [Plugin guidelines](https://docs.obsidian.md/Plugins/Releasing/Plugin+guidelines) and [Submission requirements](https://docs.obsidian.md/Plugins/Releasing/Submission+requirements+for+plugins).
-    -   Consider automating releases using [GitHub Actions](https://docs.obsidian.md/Plugins/Releasing/Release+your+plugin+with+GitHub+Actions).
-    -   Utilize [Beta-testing](https://docs.obsidian.md/Plugins/Releasing/Beta-testing+plugins) for feedback before full release.
-    -   Follow the process to [Submit your plugin](https://docs.obsidian.md/Plugins/Releasing/Submit+your+plugin).
+    -   **Adhere strictly** to the [Plugin guidelines](mdc:https:/docs.obsidian.md/Plugins/Releasing/Plugin+guidelines) and [Submission requirements](mdc:https:/docs.obsidian.md/Plugins/Releasing/Submission+requirements+for+plugins).
+    -   Consider automating releases using [GitHub Actions](mdc:https:/docs.obsidian.md/Plugins/Releasing/Release+your+plugin+with+GitHub+Actions).
+    -   Utilize [Beta-testing](mdc:https:/docs.obsidian.md/Plugins/Releasing/Beta-testing+plugins) for feedback before full release.
+    -   Follow the process to [Submit your plugin](mdc:https:/docs.obsidian.md/Plugins/Releasing/Submit+your+plugin).
 -   **Mobile Compatibility:** Explicitly test on mobile platforms.
-    -   Reference: [Mobile Development](https://docs.obsidian.md/Plugins/Getting+started/Mobile+development).
+    -   Reference: [Mobile Development](mdc:https:/docs.obsidian.md/Plugins/Getting+started/Mobile+development).
 
 ---
 
 ## 10. Additional Resources
 
--   **Obsidian Sample Plugin:** [obsidianmd/obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin) - Essential starting template.
--   **Obsidian Developer Documentation:** [docs.obsidian.md/Plugins](https://docs.obsidian.md/Plugins) - Primary source for all API guides.
+-   **Obsidian Sample Plugin:** [obsidianmd/obsidian-sample-plugin](mdc:https:/github.com/obsidianmd/obsidian-sample-plugin) - Essential starting template.
+-   **Obsidian Developer Documentation:** [docs.obsidian.md/Plugins](mdc:https:/docs.obsidian.md/Plugins) - Primary source for all API guides.
 -   **Cursor Documentation:** [Provide Link to Cursor Docs Here - *placeholder*] (If available and relevant for plugin developers)
 
 ---
